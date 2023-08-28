@@ -1,0 +1,12 @@
+aws_region                 = "us-west-2"
+bucket_name                = "iapolinario-bucket"
+environment                = "production"
+enable_versioning          = true
+function_name              = "api_function"
+handler                    = "lambda.lambda_handler"
+lambda_filename            = "../app/lambda.zip"
+runtime                    = "python3.7"
+path_patterns              = ["/health", "/api/*"]
+cidr_block                 = "10.0.0.0/16"
+lambda_role_name           = "iapolinario-lambda-role"
+lambda_s3_read_policy_name = "iapolinario-lambda-s3-read-policy"

@@ -1,0 +1,9 @@
+[2023-08-04 12:31:10] [INFO] [AUTH]: User Bob initialized login.
+[2023-08-04 12:31:11] [ERROR] [AUTH]: User Bob password mismatch.
+[2023-08-04 12:31:12] [DEBUG] [DB]: Query executed: SELECT * FROM users WHERE name='Bob'.
+[2023-08-04 12:31:15] [INFO] [API]: User Bob requested password reset link.
+[2023-08-04 12:31:17] [DEBUG] [EMAIL]: Sending password reset link to bob@example.com.
+[2023-08-04 12:31:20] [DEBUG] [AUTH]: User Bob accessed password reset page.
+[2023-08-04 12:31:23] [INFO] [API]: User Bob reset password successfully.
+[2023-08-04 12:31:25] [ERROR] [DB]: Failed to log password reset for user Bob.
+[2023-08-04 12:31:27] [DEBUG] [API]: Fetching user Bob details.

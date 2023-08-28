@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app
+    ports:
+      - "5000:80"
+
+  notebook:
+    image: jupyter/scipy-notebook:latest
+    volumes:
+      - ./notebooks:/home/jovyan/WatchTowerTech
+    ports:
+      - "8888:8888"
