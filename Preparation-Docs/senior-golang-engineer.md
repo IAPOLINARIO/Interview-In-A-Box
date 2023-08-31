@@ -145,7 +145,7 @@ Pointers hold the memory address of a value. The `*` and `&` operators are used 
 ```go
 var x int = 1
 var y *int = &x
-*z = 2 // x is now 2
+y = 2 // x is now 2
 ```
 
 ---
