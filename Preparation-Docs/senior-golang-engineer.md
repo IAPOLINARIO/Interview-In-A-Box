@@ -32,7 +32,7 @@
 **A**:
 Concurrency is often managed using goroutines and channels in Golang. Goroutines are lightweight threads, and channels are used for communication between them.
 
-[[[go
+```go
 ch := make(chan int)
 go func() {
     for i := 0; i < 5; i++ {
@@ -42,7 +42,8 @@ go func() {
 }()
 for n := range ch {
     fmt.Println(n)
-}]]]
+}
+```
 
 ---
 
@@ -53,9 +54,10 @@ for n := range ch {
 **A**:
 Go Modules is the standard solution for dependency management in Go, making builds reproducible.
 
-[[[bash
+```bash
 go mod init my-module
-go get github.com/some/package]]]
+go get github.com/some/package
+```
 
 ---
 
@@ -75,10 +77,11 @@ Performance can be optimized by profiling the application using tools like `ppro
 **A**:
 Error handling in Go is explicit. Functions often return an error as the last return value, and it's the responsibility of the caller to check and handle the error.
 
-[[[go
+```go
 if err != nil {
     // handle error
-}]]]
+}
+```
 
 ---
 
@@ -98,12 +101,13 @@ Some useful packages include `fmt` for formatting, `net/http` for HTTP servers a
 **A**:
 Go has a built-in testing package called `testing`. You write tests as functions with a signature like `func TestXxx(*testing.T)`, and run them using `go test`.
 
-[[[go
+```go
 func TestAdd(t *testing.T) {
     if 2+2 != 4 {
         t.Errorf("Expected 4, got %d", 2+2)
     }
-}]]]
+}
+```
 
 ---
 
@@ -123,10 +127,11 @@ In Go, variables declared without an explicit initial value are given a zero val
 **A**:
 An interface is a collection of method signatures that a type can implement. It provides a way to achieve polymorphism in Go.
 
-[[[go
+```go
 type Writer interface {
     Write([]byte) (int, error)
-}]]]
+}
+```
 
 ---
 
@@ -137,10 +142,11 @@ type Writer interface {
 **A**:
 Pointers hold the memory address of a value. The `*` and `&` operators are used to dereference and get the address of a variable, respectively.
 
-[[[go
+```go
 var x int = 1
 var y *int = &x
-*z = 2 // x is now 2]]]
+*z = 2 // x is now 2
+```
 
 ---
 
@@ -160,9 +166,10 @@ Go has a built-in garbage collector that automatically frees up unused memory. I
 **A**:
 Arrays have a fixed size, while slices are dynamically-sized. Slices are more commonly used and are built on top of arrays.
 
-[[[go
+```go
 arr := [3]int{1, 2, 3}
-slc := []int{1, 2, 3}]]]
+slc := []int{1, 2, 3}
+```
 
 ---
 
@@ -173,8 +180,9 @@ slc := []int{1, 2, 3}]]]
 **A**:
 A goroutine is a lightweight thread in Go. You start one by using the `go` keyword followed by a function call.
 
-[[[go
-go doSomething()]]]
+```go
+go doSomething()
+```
 
 ---
 
@@ -185,10 +193,11 @@ go doSomething()]]]
 **A**:
 Channels are used for communication between goroutines. They provide a way for one goroutine to send data to another.
 
-[[[go
+```go
 ch := make(chan int)
 ch <- 1 // send
-x := <-ch // receive]]]
+x := <-ch // receive
+```
 
 ---
 
@@ -208,14 +217,15 @@ Go is a statically typed language. The type of a variable must be known at compi
 **A**:
 Embedding allows you to include one struct type inside another. It provides a form of inheritance in Go.
 
-[[[go
+```go
 type Animal struct {
     Name string
 }
 type Dog struct {
     Animal
     Bark string
-}]]]
+}
+```
 
 ---
 
@@ -261,3 +271,7 @@ The `net/http` package provides functions to make HTTP requests. The `http.Get` 
 
 **A**:
 The `context` package is used for carrying deadlines, cancellations, and other request-scoped values across API boundaries and between processes.
+
+```
+
+```
