@@ -1,0 +1,3 @@
+server:
+  Bucket: "iapolinario-slack"
+  Region: "us-east-2"

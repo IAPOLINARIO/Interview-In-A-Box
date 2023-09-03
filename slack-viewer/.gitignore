@@ -1,0 +1,18 @@
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Binaries for programs and plugins
+*.exe
+*.out
+*.app
+Makefile
+
+*.code-workspace
+
+.env
+export
+Output

@@ -1,0 +1,34 @@
+{
+    "containerDefinitions": [
+        {
+            "name": "slackviewer-web",
+            "image": "589059280262.dkr.ecr.us-west-2.amazonaws.com/slackviewer-web:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "slackviewer-frontend-prod",
+                    "awslogs-region": "us-west-2",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "family": "slackviewer-web",
+    "taskRoleArn": "arn:aws:iam::589059280262:role/slackviewer-prod-ecs-execution-role",
+    "executionRoleArn": "arn:aws:iam::589059280262:role/slackviewer-prod-ecs-execution-role",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048"
+}
