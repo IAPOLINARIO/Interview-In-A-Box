@@ -60,7 +60,5 @@ func calculateDepth(node *BinaryTree, currentDepth int) int {
 		finalDepth += calculateDepth(node.Right, currentDepth+1)
 	}
 
-	//finalDepth = finalDepth + currentDepth
-
 	return finalDepth
 }
